@@ -1,12 +1,11 @@
 
-class Product {
+class product {
 
      name;
      price;
      category;
      description;
      rating;
-
 
      addToCart() {
           console.log("Product added to cart");
@@ -25,3 +24,5 @@ class Product {
      } 
 
 }
+
+let iphone = new Product(); 
