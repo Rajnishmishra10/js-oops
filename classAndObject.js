@@ -1,11 +1,19 @@
 
-class product {
+class Product {
 
-     name;
-     price;
-     category;
-     description;
-     rating;
+     // name;
+     // price;
+     // category;
+     // description;
+     // rating;
+
+     constructor(ProductName,ProductPrice, ProductCategory, ProductDescription, ProductRating) {
+          this.name = ProductName;
+          this.price = ProductPrice;
+          this.category = ProductCategory;
+          this.description = ProductDescription;
+          this.rating = ProductRating;
+     }
 
      addToCart() {
           console.log("Product added to cart");
@@ -25,4 +33,5 @@ class product {
 
 }
 
-let iphone = new Product(); 
+let iphone = new Product("iphone 12", 125000, "Mobile", "Apple iphone 12", 4.5); 
+console.log(iphone)
