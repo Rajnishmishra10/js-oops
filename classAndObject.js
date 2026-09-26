@@ -9,11 +9,13 @@ class Product {
 
      constructor(ProductName,ProductPrice, ProductCategory, ProductDescription, ProductRating) {
           this.#name = ProductName;
-          this.#price = ProductPrice;
+          if(ProductPrice > 0 && typeof(ProductPrice) === "number") {
+               this.#price = ProductPrice;
+          }
           this.category = ProductCategory;
           this.description = ProductDescription;
           this.rating = ProductRating;
-     }
+     } 
 
      getPrice() {
           return this.#price;
@@ -55,4 +57,4 @@ iphone.setPrice(1000);
 
 iphone.displayProduct(); 
 
-console.log(iphone.getPrice());
+console.log(iphone.getPrice()); 
